@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work expierience – Fio</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  z-index: 0;
+}
+body > * {
+  position: relative;
+  z-index: 1;
+}
+</style>
+  </head>
+  <body>
+<nav class="centered-nav">
+  <div class="nav-top">
+    <a href="https://vimeo.com/user130535227" target="_blank" rel="noopener noreferrer">Watch Showreel</a>
+  </div>
+
+  <a href="index.html" class="logo-blur-area">
+  <img src="./assets/Logob1.png" alt="Fio Logo" class="logo-img" />
+</div>
+
+  <div class="nav-bottom">
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="whitespace w-3"></div>
+
+
+    <!-- Project Content -->
+    <section class="project-content fade-in">
+      <h2>Staatstheather Digitaltheater</h2>
+      <p>
+        As a working student at the Staatstheater Augsburg in the Digital
+Theater department, I was involved in a wide range of creative and
+technical tasks. I filmed and produced the intro and outro for Der
+Sandmann and supported the production Ekklesia by designing
+printed materials and applying textures to 3D models. For Wonderland
+Avenue, I edited a documentary video and added various
+digital elements.
+A major focus of my work was on the production Der Vorgang,
+where I was responsible for the digital implementation. Since the
+subject matter of this play was particularly important, I valued the
+opportunity to contribute creatively and technically to its realization.
+In addition to production-related work, I represented the theater
+at exhibitions such as ARS Electronica, where I helped present the
+productions to visitors and introduced them to VR experiences. I
+also supported various performances by assisting the audience in
+exploring the digital aspects of the productions.
+      </p>
+<p>
+  <a href="https://staatstheater-augsburg.de/der_vorgang" target="_blank" rel="noopener noreferrer">Der Vorgang,</a>
+  <a href="https://staatstheater-augsburg.de/ekklesia" target="_blank" rel="noopener noreferrer">Ekklesia,</a>
+  <a href="https://staatstheater-augsburg.de/wonderland_ave" target="_blank" rel="noopener noreferrer">wonderland_ave</a>
+</p>
+<div class="whitespace w-2"></div>
+   <section class="gallery fade-in">
+      <img src="./assets/img1011.jpg" alt=" 1" />
+   </section>
+      <h2>Studio Louter</h2>
+      <p>
+        „Closer to Memling“ is an immersive experience created by Studio Louter
+for the Sint-Janshospitaal (St. John‘s Hospital) in Bruges. It focuses
+on Hans Memling‘s masterpieces, which can be experienced up close
+through high-resolution digital renderings. Through interactive elements,
+lighting, and sound, visitors experience the works in new ways and uncover
+details that are hardly visible to the naked eye.
+The project is aimed at a broad audience, particularly families and children
+from about seven years of age. Workshops, prototype testing, and
+user-centered design ensured that the experience was interactive and
+accessible.
+During my internship, I created sketches and mock-ups for the interior
+design. These served both as a visualization for the museum in Bruges
+and as a basis for coordinating the final design. This allowed me to actively
+contribute to the conception and presentation of the project.
+      </p>
+<p>
+  <a href="https://www.studiolouter.nl/en/museum-sint-janshospitaal-closer-to-memling" target="_blank" rel="noopener noreferrer">Closer to Memling</a>
+</p>
+<div class="whitespace w-2"></div>
+   <section class="gallery fade-in">
+      <img src="./assets/img101.jpg" alt=" 1" />
+   </section>
+      <br />
+      <br />
+
+      <h2>Labbinaer</h2>
+      <p>
+        During my internship at Labbinaer, I was able to gain valuable insights
+into the daily work processes and contribute to different projects.
+My tasks included supporting the team ,I was mainly responsible
+for creating and updating social media content. I filmed and
+edited short clips, kept the channels up to date, and supported the
+communication of ongoing projects. In addition, I edited video documentation,
+which allowed me to strengthen my skills in storytelling
+and post-production. Through this experience, I learned how to
+work independently and collaboratively in a creative environment,
+and I developed both my organizational and communication skills.
+      </p>
+<p>
+  <a href="https://labbinaer.de/klostermuseum-ottobeuren" target="_blank" rel="noopener noreferrer">Klostermuseum Ottobeuren</a>
+</p>
+<div class="whitespace w-2"></div>
+   <section class="gallery fade-in">
+      <img src="./assets/img103.jpg" alt=" 1" />
+   </section>
+      <br />
+      <br />
+    </section>
+
+
+    <div class="footer">
+  <p>
+    PORTFOLIO 2025 -
+    <a href="legal.html">Impressum / Datenschutz</a>
+  </p>
+</div>
+
+    <script>
+      // Scroll Fade-In Animation
+      const faders = document.querySelectorAll(".fade-in");
+      const appear = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      faders.forEach((el) => appear.observe(el));
+    </script>
+  </body>
+</html>

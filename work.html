@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work – Fio</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  z-index: 0;
+}
+body > * {
+  position: relative;
+  z-index: 1;
+}
+/*  Grid  */
+      .work-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 10vh auto;
+        padding: 0 20px;
+        z-index: 120;
+      }
+      .work-item {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+        z-index: 110;
+      }
+
+      /* Beim Scrollen sichtbar machen */
+      .work-item.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .work-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(100%); /*BW*/
+        transition: filter 0.5s ease, transform 0.5s ease;
+      }
+      .work-item:hover img {
+        filter: grayscale(0%);
+        transform: scale(1.05);
+      }
+      /* Titel-Overlay */
+      .work-title {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        color: white;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: opacity 0.4s ease;
+        text-align: center;
+      }
+
+      .work-item:hover .work-title {
+        opacity: 1;
+      }
+
+      /*  Responsive Anpassungen  */
+      @media (max-width: 900px) {
+        .work-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 600px) {
+        .work-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .footer {
+        text-align: center;
+        margin: 3em 0;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+<nav class="centered-nav">
+  <div class="nav-top">
+    <a href="https://vimeo.com/user130535227" target="_blank" rel="noopener noreferrer">Watch Showreel</a>
+  </div>
+
+  <a href="index.html" class="logo-blur-area">
+  <img src="./assets/Logob1.png" alt="Fio Logo" class="logo-img" />
+</div>
+
+  <div class="nav-bottom">
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+    <div class="work-section">
+      <h1>Work</h1>
+    </div>
+
+    <section class="work-grid">
+      <div class="work-item">
+        <a href="bachelor.html">
+          <img src="./assets/img3.jpg" alt="Echoes of Light" />
+          <div class="work-title">Echoes of Light: Shaping Thoughtscapes</div>
+        </a>
+      </div>
+
+      <div class="work-item">
+        <a href="machina.html">
+          <img src="./assets/img7.jpg" alt="@Machina" />
+          <div class="work-title">@Machina</div>
+        </a>
+      </div>
+
+      <div class="work-item">
+        <a href="bachsehen.html">
+          <img src="./assets/img13.jpg" alt="Bach sehen" />
+          <div class="work-title">Bach sehen</div>
+        </a>
+      </div>
+
+      <div class="work-item">
+        <a href="http://konzertverein-kassel.de/classic-clip/student/aktuell.php" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/img24.jpg" alt="MusikVideo" />
+          <div class="work-title"> Stravinsky Musikvideo</div>
+        </a>
+      </div>
+
+      <div class="work-item">
+        <a href="arflowers.html">
+          <img src="./assets/img30.jpg" alt="AR Flowers" />
+          <div class="work-title">AR Flowers</div>
+        </a>
+      </div>
+
+      <div class="work-item">
+        <a href="fashionshow.html">
+          <img src="./assets/img36.jpg" alt="FashionShow" />
+          <div class="work-title">Fashion Show</div>
+        </a>
+      </div>
+
+      <div class="work-item">
+        <a href="shortmovies.html">
+          <img src="./assets/img87.jpg" alt="EinsBein" />
+          <div class="work-title">Short Movie</div>
+        </a>
+      </div>
+
+      <div class="work-item">
+        <a href="dj.html">
+          <img src="./assets/img39.jpg" alt="DJ" />
+          <div class="work-title">DJ</div>
+        </a>
+      </div>
+
+      <div class="work-item">
+        <a href="workexpierience.html">
+          <img src="./assets/img102.jpg" alt="Work" />
+          <div class="work-title">Work</div>
+        </a>
+      </div>
+    </section>
+
+    <div class="footer">
+  <p>
+    PORTFOLIO 2025 -
+    <a href="legal.html">Impressum / Datenschutz</a>
+  </p>
+</div>
+
+    <script>
+      // === Scroll-Fade Animation ===
+      const items = document.querySelectorAll(".work-item");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      items.forEach((item) => observer.observe(item));
+    </script>
+  </body>
+</html>

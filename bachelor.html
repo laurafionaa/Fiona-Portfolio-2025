@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bachelor – Fio</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  z-index: 0;
+}
+body > * {
+  position: relative;
+  z-index: 1;
+}
+</style>
+  </head>
+  <body>
+<nav class="centered-nav">
+  <div class="nav-top">
+    <a href="https://vimeo.com/user130535227" target="_blank" rel="noopener noreferrer">Watch Showreel</a>
+  </div>
+
+  <a href="index.html" class="logo-blur-area">
+  <img src="./assets/Logob1.png" alt="Fio Logo" class="logo-img" />
+</div>
+
+  <div class="nav-bottom">
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="whitespace w-3"></div>
+    <!-- Hero Section -->
+    <header class="hero">
+      <img src="./assets/img3.jpg" alt="Echoes of Light Project Image" />
+    </header>
+
+    <!-- Project Content -->
+    <section class="project-content fade-in">
+      <h2>Concept</h2>
+      <p>
+        My bachelor thesis explores the interplay between reflection as
+both a physical phenomenon and a metaphor for self-perception.
+The work combines concepts from physics, psychology, and digital
+media to create an immersive performance environment in which
+light, sound, and movement interact dynamically.
+At the heart of the installation is a suspended light grid that responds
+in real time to visitors’ positions, captured through Kinect
+tracking, and is synchronized with sound textures ranging from
+deep bass to delicate highs. These audiovisual interactions shape
+shifting atmospheres and invite the audience to actively participate
+in the experience.
+Through a choreographed dance performance, the abstract themes
+of reflection and perception are embodied and transformed
+into visible, tangible movements. The result is a multisensory environment
+where artistic expression and scientific principles converge,
+encouraging viewers to reflect on their own perception and
+emotional resonance within the space.
+      </p>
+
+      <br />
+      <br />
+      <h2>Role & Tools</h2>
+      <p>
+        Concept, Direction, Visual Design<br />
+        Tools: TouchDesigner, Kinect
+      </p>
+    </section>
+
+    <!-- Work-style Gallery -->
+    <section class="gallery fade-in">
+      <img src="./assets/img1.jpg" alt="Echoes of Light Frame 1" />
+      <img src="./assets/img2.jpg" alt="Echoes of Light Frame 2" />
+      <img src="./assets/img3.jpg" alt="Echoes of Light Frame 3" />
+      <img src="./assets/img4.jpg" alt="Echoes of Light Frame 4" />
+      <img src="./assets/img5.jpg" alt="Echoes of Light Frame 5" />
+      <img src="./assets/img5.jpg" alt="Echoes of Light Frame 6" />
+    </section>
+
+    <div class="footer">
+  <p>
+    PORTFOLIO 2025 -
+    <a href="legal.html">Impressum / Datenschutz</a>
+  </p>
+</div>
+
+    <script>
+      // Scroll Fade-In Animation
+      const faders = document.querySelectorAll(".fade-in");
+      const appear = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      faders.forEach((el) => appear.observe(el));
+    </script>
+  </body>
+</html>

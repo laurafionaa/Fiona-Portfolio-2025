@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@Machina Futur21 – Fio</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  z-index: 0;
+}
+body > * {
+  position: relative;
+  z-index: 1;
+}
+</style>
+  </head>
+  <body>
+<nav class="centered-nav">
+  <div class="nav-top">
+    <a href="https://vimeo.com/user130535227" target="_blank" rel="noopener noreferrer">Watch Showreel</a>
+  </div>
+
+  <a href="index.html" class="logo-blur-area">
+  <img src="./assets/Logob1.png" alt="Fio Logo" class="logo-img" />
+</div>
+
+  <div class="nav-bottom">
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="whitespace w-3"></div>
+    <!-- Hero Section -->
+    <header class="hero">
+      <img src="./assets/img7.jpg" alt="Echoes of Light Project Image" />
+    </header>
+
+    <!-- Project Content -->
+    <section class="project-content fade-in">
+      <h2>Concept</h2>
+      <p>
+        The audiovisual installation in the machine room of the LWL-Industriemuseum
+Ziegelei Lage. The relationship between man and
+machine is spatially visualized with projection mapping, technology,
+and light installations over 3 floors around the edge mill. The automation
+of work, the digitalization of our lives. Computers do almost
+everything for us. How do machines communicate with each other?
+The pan grinder, the most important machine in the room, served
+as a grinder for the clay that was processed for the bricks and is
+recontextualized by the projected animations and used as the main
+projection surface.
+The metaphor of the dark factory - the abandoned factory - an
+image of the future that already seems to be a reality today, continues
+to advance. Machines will increasingly displace people from
+jobs for which society no longer has any use. The future of work will
+be determined by the social impact of digitalization.
+The old brickworks in Lage - now an industrial museum - is something
+special in its experience as a media space, as this factory already
+represents a dark factory in the broader sense. Displaced by
+technical progress and automation, it is no longer in operation and
+is a reflection of the past. By projecting a future working perspective
+onto the environment of a disused industry, the Alte Ziegelei is
+awakening in the digital age and becoming a smart factory.
+      </p>
+<a href="https://vimeo.com/841803807" target="_blank" rel="noopener noreferrer">Watch @Machina</a>
+      <br />
+      <br />
+      <h2>Role & Tools</h2>
+      <p>
+        Idea: Fiona Giljohann<br />
+Conception: Fiona Giljohann, Regina Herdt, Katharina Meyer<br />
+Concept design: Katharina Meyer, Fiona Giljohann, Regina Herdt<br />
+Animation: Katharina Meyer, Regina Herdt, Fiona Giljohann<br />
+3D: Fabian<br />
+Storyboard & Animatic: Katharina Meyer<br />
+Sound: Fiona Giljohann, (Fabian Tellbroeker), Antonia Schmidt<br />
+Light: Fiona Giljohann<br />
+Technology: Fiona Giljohann, Regina Herdt, Katharina Meyer, Rafael Torezo, Kim Groche, Benjamin Hohenheiser<br />
+Photography: Regina Herdt, Rafael<br />
+Videography: Fiona Giljohann, Rafael<br />
+Layout: Fiona Giljohann<br />
+Editing: Katharina Meyer<br />
+Logistics: Regina Herdt<br />
+Organization: Fiona Giljohann, Katharina Meyer<br />
+Supervisor: Claudia Rohrmoser<br />
+Location: LWL Industriemuseum Minden Alte Ziegelei<br />
+Collaboration: Futur21<br />
+Sponsors: Futur21, LVR,<br />
+      </p>
+<div class="whitespace w-2"></div>
+
+    </section>
+
+    <!-- Work-style Gallery -->
+    <section class="gallery fade-in">
+      <img src="./assets/img7.jpg" alt=" 1" />
+      <img src="./assets/img8.jpg" alt=" 2" />
+      <img src="./assets/img9.jpg" alt=" 3" />
+      <img src="./assets/img10.jpg" alt=" 4" />
+      <img src="./assets/img11.jpg" alt=" 5" />
+      <img src="./assets/img12.jpg" alt=" 6" />
+    </section>
+
+    <div class="footer">
+  <p>
+    PORTFOLIO 2025 -
+    <a href="legal.html">Impressum / Datenschutz</a>
+  </p>
+</div>
+
+    <script>
+      // Scroll Fade-In Animation
+      const faders = document.querySelectorAll(".fade-in");
+      const appear = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      faders.forEach((el) => appear.observe(el));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR Flowers – Fio</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  z-index: 0;
+}
+body > * {
+  position: relative;
+  z-index: 1;
+}
+</style>
+  </head>
+  <body>
+<nav class="centered-nav">
+  <div class="nav-top">
+    <a href="https://vimeo.com/user130535227" target="_blank" rel="noopener noreferrer">Watch Showreel</a>
+  </div>
+
+  <a href="index.html" class="logo-blur-area">
+  <img src="./assets/Logob1.png" alt="Fio Logo" class="logo-img" />
+</div>
+
+  <div class="nav-bottom">
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="whitespace w-3"></div>
+    <!-- Hero Section -->
+    <header class="hero">
+      <img src="./assets/img27.jpg" alt="Echoes of Light Project Image" />
+    </header>
+
+    <!-- Project Content -->
+    <section class="project-content fade-in">
+      <h2>Concept</h2>
+      <p>
+        The concept refers to toxic masculinity and the different experiences and associations that people have and share with the term, the soundtracks run in the background and viewers are invited to take a closer look at the flowers, which are to be explored in an abstract and altered form. With the aim of turning clichés and stereotypes on their head and assigning flowers to the opposite sex.
+      </p>
+
+      <br />
+      <br />
+      <h2>Role & Tools</h2>
+      <p>
+        Concept, Direction, Visual Design<br />
+        Tools: Blender, C4D, Styly
+      </p>
+      <div class="whitespace w-2"></div>
+    </section>
+
+
+    <!-- Work-style Gallery -->
+    <section class="gallery fade-in">
+      <img src="./assets/img30.jpg" alt=" 1" />
+      <img src="./assets/img25.jpg" alt=" 2" />
+      <img src="./assets/img28.jpg" alt=" 3" />
+    </section>
+
+    <div class="footer">
+  <p>
+    PORTFOLIO 2025 -
+    <a href="legal.html">Impressum / Datenschutz</a>
+  </p>
+</div>
+
+    <script>
+      // Scroll Fade-In Animation
+      const faders = document.querySelectorAll(".fade-in");
+      const appear = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      faders.forEach((el) => appear.observe(el));
+    </script>
+  </body>
+</html>

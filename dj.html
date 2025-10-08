@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DJ – Fio</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  z-index: 0;
+}
+body > * {
+  position: relative;
+  z-index: 1;
+}
+</style>
+  </head>
+  <body>
+<nav class="centered-nav">
+  <div class="nav-top">
+    <a href="https://vimeo.com/user130535227" target="_blank" rel="noopener noreferrer">Watch Showreel</a>
+  </div>
+
+  <a href="index.html" class="logo-blur-area">
+  <img src="./assets/Logob1.png" alt="Fio Logo" class="logo-img" />
+</div>
+
+  <div class="nav-bottom">
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="whitespace w-3"></div>
+    <!-- Hero Section -->
+    <header class="hero">
+      <img src="./assets/img41.jpg" alt="Echoes of Light Project Image" />
+    </header>
+
+    <!-- Project Content -->
+    <section class="project-content fade-in">
+      <h2>Concept</h2>
+      <p>
+Hi it’s Fio licious & I play techno<br />
+Delicious 👅💿🪩💃🏼🥂⛓️<br />
+Experimental Vibes 💿<br />
+Bunker ⛓️<br />
+Trance - D(tr)ance vibes 🫧 with DJBabyBangs<br />
+Groovy sounds with PEPE🐼<br />
+Housie vibes - met de jongens @ joao&masu 🧜🏽‍♂️🧜🏽‍♂️<br />
+<br />
+-upcoming-<br />
+27.09.2025: City Club B-day B2B DJBabyBangs // cc Augsburg<br />
+29.10.2025: City Club Hänging Fiolicious & Friends // cc Augsburg<br />
+-past-<br />
+25.07.2025: Werkschau Party B2B DJBabyBangs // City Club Augsburg<br />
+11.07.2025: Werkschau Party // Nrzp Bielefeld<br />
+21.06.2025: Dyke March After Party // Alte Metzgerei<br />
+14.06.2025: UltraBass // Hallo Werner<br />
+25.04.2025: IMPEDANZ: genesis // City Club<br />
+12.04.25 Soli Fiesta, grandhotel cosmopolis, Augsburg<br />
+20.04.24 Grand Fiesta, grandhotel cosmopolis, Augsburg<br />
+06.12.23 Sexyland, Amsterdam b2b ftgrltv<br />
+04.11.23 Hallo Werner, Augsburg<br />
+22.09.23 Hallo Werner, Augsburg<br />
+      </p>
+
+      <br />
+      <br />
+      <h2>Listen</h2>
+      <p>
+        <a href="https://on.soundcloud.com/9vlPaITniQDgF8gIt2" target="_blank" rel="noopener noreferrer">Listen NOW</a>
+      </p>
+
+      <div class="whitespace w-2"></div>
+
+    </section>
+
+    <!-- Work-style Gallery -->
+    <section class="gallery fade-in">
+      <img src="./assets/img38.jpg" alt="Frame 1" />
+      <img src="./assets/img39.jpg" alt="Frame 2" />
+      <img src="./assets/img38.jpg" alt="Frame 3" />
+      <img src="./assets/img41.jpg" alt="Frame 4" />
+      <img src="./assets/img42.jpg" alt="Frame 5" />
+      <img src="./assets/img37.jpg" alt="Frame 6" />
+      <div class="whitespace w-3"></div>
+
+    </section>
+
+    <div class="footer">
+  <p>
+    PORTFOLIO 2025 -
+    <a href="legal.html">Impressum / Datenschutz</a>
+  </p>
+</div>
+
+    <script>
+      // Scroll Fade-In Animation
+      const faders = document.querySelectorAll(".fade-in");
+      const appear = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      faders.forEach((el) => appear.observe(el));
+    </script>
+  </body>
+</html>
