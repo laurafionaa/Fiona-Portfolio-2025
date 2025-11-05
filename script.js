@@ -300,3 +300,5 @@ document.addEventListener("DOMContentLoaded", () => {
     banner.classList.add("hidden");
   });
 });
+
+// POP_UP
