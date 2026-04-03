@@ -24,7 +24,7 @@ a {
   font-family: "Circular Std";
   font-size: 14px;
   font-weight: 500;
-  color: #000;
+  color: #1500ff;
   transition: color 0.3s;
 }
 
@@ -202,7 +202,7 @@ nav a,
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(62, 0, 116, 0.697); 
+  background: rgba(0, 26, 255, 0.851); 
   color: white; 
   padding: 1em;
   display: flex;
@@ -217,14 +217,14 @@ nav a,
   color: #f2f2f2; /
 }
 .cookie-banner strong {
-  color: #a65dff; /
+  color: #8570ff; /
 }
 .cookie-banner a {
   color: #ffffff;
   text-decoration: underline;
 }
 .cookie-banner a:hover {
-  color: #a65dff;
+  color: #1c00ba;;
 }
 .cookie-banner.hidden {
   display: none;
@@ -237,7 +237,7 @@ nav a,
 /* Buttons */
 .cookie-buttons button {
   background: white;
-  color: rgb(69, 4, 125); /* Textfarbe der Buttons */
+  color: rgb(0, 26, 255, 0.851); /* Textfarbe der Buttons */
   border: none;
   padding: 0.5em 1.2em;
   cursor: pointer;
@@ -248,7 +248,7 @@ nav a,
 
 /* Hover-Effekt */
 .cookie-buttons button:hover {
-  background: #9363da;
+  background: rgb(0, 26, 255, 0.851);
   color: white;
 }
 
@@ -433,7 +433,7 @@ nav a,
 }
 .project-content p {
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: none;
   font-family: "Circular Std";
   font-size: 1.1em;
   font-weight: 500;
