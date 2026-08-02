@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bachelor – Fio</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  z-index: 0;
+}
+body > * {
+  position: relative;
+  z-index: 1;
+}
+</style>
+  </head>
+  <body>
+<nav class="centered-nav">
+  <div class="nav-top">
+    <a href="https://vimeo.com/user130535227" target="_blank" rel="noopener noreferrer">Watch Showreel</a>
+  </div>
+
+  <a href="index.html" class="logo-blur-area">
+  <img src="./assets/Logob1.png" alt="Fio Logo" class="logo-img" />
+</div>
+
+  <div class="nav-bottom">
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="whitespace w-3"></div>
+    <!-- Hero Section -->
+    <header class="hero">
+      <img src="./assets/img2.jpg" alt="Unsilenced 3" />
+    </header>
+
+    <!-- Project Content -->
+    <section class="project-content fade-in">
+      <h2>Concept</h2>
+      <p>
+        UN/SILENCED explores Female Rage as both a personal emotion and a collective response to patriarchal structures. The immersive audio installation transforms individual experiences of anger, frustration, and resistance into a shared spatial experience, inviting visitors to confront emotions that have long been silenced. 
+        At the heart of the installation are six suspended loudspeakers, each representing an individual voice. While standing beneath a single speaker, visitors encounter intimate personal narratives. As they move through the space, these voices overlap, creating an increasingly dense soundscape in which stories merge into a powerful collective chorus. 
+        The spatial composition encourages visitors to actively navigate the installation, making movement an essential part of the experience.
+        The work combines principles of spatial audio, interaction design, and feminist discourse to investigate how sound can shape perception and emotional engagement. Rather than presenting anger as something destructive, UN/SILENCED reclaims it as a source of visibility, solidarity, and empowerment.
+        By translating invisible social structures into an embodied sonic environment, the installation creates a space for listening, reflection, and recognition. It invites audiences to reconsider whose voices are heard, whose emotions are legitimized, and how collective experiences can transform silence into resistance.
+      </p>
+      <a href="https://vimeo.com/1214864147?share=copy&fl=sv&fe=ci" target="_blank" rel="noopener noreferrer">Watch UN/SILENCED</a>
+      <br />
+      <br />
+      <h2>Role & Tools</h2>
+      <p>
+        Concept, Exhibition Design, Production<br />
+        Tools: TouchDesigner, Giga Port, Audacity <br />
+        Thanks to my supporters <br />
+        Voices: Arame, Anna, AnnaLena, Leo, Nina, Samira<br />
+        Video Dokumentation: AJ & Fiona <br />
+      </p>
+    </section>
+    <div class="whitespace w-2"></div>
+
+    <!-- Work-style Gallery -->
+    <section class="gallery fade-in">
+      <img src="./assets/img1.jpg" alt="Unsilenced 1" />
+      <img src="./assets/img2.jpg" alt="Unsilenced 2" />
+      <img src="./assets/img3.jpg" alt="Unsilenced 3" />
+      <img src="./assets/img4.jpg" alt="Unsilenced 4" />
+      <img src="./assets/img5.jpg" alt="Unsilenced 5" />
+      <img src="./assets/img6.jpg" alt="Unsilenced 6" />
+      <img src="./assets/img777.jpg" alt="Unsilenced 7" />
+      <img src="./assets/img888.jpg" alt="Unsilenced 8" />
+      <img src="./assets/img999.jpg" alt="Unsilenced 9" />
+    </section>
+
+    <div class="footer">
+  <p>
+    PORTFOLIO 2025 -
+    <a href="legal.html">Impressum / Datenschutz</a>
+  </p>
+</div>
+
+    <script>
+      // Scroll Fade-In Animation
+      const faders = document.querySelectorAll(".fade-in");
+      const appear = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      faders.forEach((el) => appear.observe(el));
+    </script>
+  </body>
+</html>

@@ -41,10 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Split text and populate gallery
+  // GALLERY MAIN Split text and populate gallery
   splitTextIntoSpans(".mask h1");
   const imagesPerProject = 6;
-  const totalImages = 50;
+  const totalImages = 60;
   let imageIndex = 1;
   populateGallery();
 
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const names = gsap.utils.toArray(".name");
   gsap.set(".indicator", { top: "0px" });
 
-  const projects = gsap.utils.toArray(".project");
+  const projects = gsap.utils.toArray(".project-main");
   projects.forEach((project, index) => {
     ScrollTrigger.create({
       trigger: project,
@@ -302,3 +302,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // POP_UP
+
+
+
+// === LOGO SCROLL FADE OUT ===
+const logoBlurArea = document.querySelector(".logo-blur-area");
+
+if (logoBlurArea) {
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const fadeOutDistance = 100; // Nach 300px Scroll
+    
+    if (scrollPosition > fadeOutDistance) {
+      logoBlurArea.style.opacity = "0";
+      logoBlurArea.style.pointerEvents = "none";
+    } else {
+      logoBlurArea.style.opacity = "1";
+      logoBlurArea.style.pointerEvents = "auto";
+    }
+  });
+}
