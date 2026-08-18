@@ -26,6 +26,7 @@ a {
   font-weight: 500;
   color: #1500ff;
   transition: color 0.3s;
+
 }
 
 nav {
@@ -51,6 +52,7 @@ nav a,
 .nav-items a {
   text-transform: none;
 }
+
 .logo-img{
   z-index: 0;
 }
@@ -144,7 +146,7 @@ nav a,
 .symbol {
   width: 12px;
   height: 12px;
-  background-color: #000;
+  background-color: #1500ff;
   clip-path: polygon(0 50%, 100% 100%, 100% 0);
 }
 .name {
@@ -154,7 +156,7 @@ nav a,
   color: gray;
 }
 .name.active p {
-  color: #000;
+  color: #1500ff;
 }
 .preview-img {
   position: fixed;
@@ -170,7 +172,7 @@ nav a,
   right: 0;
   width: 8px;
   height: 100vh;
-  background-color: #000;
+  background-color: #1500ff;
   transform-origin: top;
   transform: scaleY(0);
 }
